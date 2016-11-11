@@ -1,0 +1,9 @@
+---
+applications:
+- name: hashmap-service-broker
+  memory: 128M
+  instances: 1
+  path: ./target/hash-client-0.0.1-SNAPSHOT.jar
+  services:
+      - mysql
+ 
