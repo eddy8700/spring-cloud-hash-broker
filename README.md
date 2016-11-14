@@ -18,5 +18,6 @@ cf login -a https://api.local.pcfdev.io --skip-ssl-validation
 Enter your username and password
 4.To register the service broker .First you need to push the service on pcf dev using the following command
 cf push <name-of-service> -m <memory-required> -p <path to your service jar>
-5.Once the service is successfully registered on the pcf dev.Now register it as a service broker 
-
+5.Once the app is running, register the broker with the Cloud Controller
+cf create-service-broker <service-name> <username> <password> http://service-broker-url
+6.
