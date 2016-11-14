@@ -6,6 +6,8 @@ Create Hash Map As a Service Broker and service should be available to other Clo
 Java 1.7 or higher
 Pivotal Cloud Foundary PCF DEV
 MYSQL 
+CF CLI
+VirtualBox: 5.0+
 
 
 #Steps
@@ -16,8 +18,11 @@ cf dev start
 3.Once pcf is started login to cf using your credentials
 cf login -a https://api.local.pcfdev.io --skip-ssl-validation
 Enter your username and password
-4.To register the service broker .First you need to push the service on pcf dev using the following command
+4.To register the service broker .Create the jar file using mvn package command
+First you need to push the service on pcf dev using the following command(Run the command from the project directory folder)
 cf push <name-of-service> -m <memory-required> -p <path to your service jar>
 5.Once the app is running, register the broker with the Cloud Controller
 cf create-service-broker <service-name> <username> <password> http://service-broker-url
-6.
+6.Make the service broker public by calling v2/service_instances/{id} url .So that it register with the cloud controller.
+
+
