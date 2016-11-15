@@ -55,17 +55,27 @@ cf marketplace
 
 cf create-service service-name basic custom-hash
 
-Now it’s time to push and bind to the client app.
+Now it’s time to push and bind to the client app.Go to broker-client and run 
+
+
+mvn clean
+
+mvn package -DskipTests
 
 .We’ll use a CF application manifest to take care of our metadata, including binding to the HashBroker service.
 
 Now push the client app using : cf push
 
 .Once the application is running, you can test it:
+
 http://route-of-your-client-application/HashBroker/{key-name}
+
 This is PUT operation
+
 Now put some value in this key for ex {"value":"bar"}
+
 Now perform the GET call on the key to fetch the value 
+
 http://route-of-your-client-application/HashBroker/{key-name} it will return value.
 
 
