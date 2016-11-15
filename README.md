@@ -40,6 +40,21 @@ mvn package -DskipTests
 
 . Now push the service on the pcf dev using cf push command it will read the configuration from manifest.yml file of the project.
 
+.Once the app is running, register the broker with the Cloud Controller (substitute the route for your broker app):
+
+cf create-service-broker hashmap-service-broker username password http://hashmap-service-broker.local.pcfdev.io
+
+.Next, we need to make the service plan public, as all plans start private by default.
+
+cf enable-service-access <service-name>(hashmap-service-broker)
+
+.You should now be able to see your service in the marketplace:
+cf marketplace
+
+.Next, create an instance of your service:
+cf create-service <service-name>(in this case it is HashBroker) basic custom-hash
+
+
 
 
 
