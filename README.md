@@ -19,7 +19,7 @@ This lab will guide you through:
 * pushing and binding a test app to that service
 * testing the app's interaction with the service
 
-== Steps
+#Steps
 . First install the pcf dev for your operating system as per the instructions provided in the url 
 https://pivotal.io/academy/course/introduction-to-pivotal-cloud-foundry
 . After installing the pcf dev.Start the pcf dev using the command
