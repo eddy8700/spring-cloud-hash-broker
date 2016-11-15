@@ -31,9 +31,13 @@ cf login -a https://api.local.pcfdev.io --skip-ssl-validation
 Enter your username and password
 
 . Clone the repository git clone https://github.com/eddy8700/spring-cloud-hash-broker.git
+
 . Go To the servive-broker-hasmap project and run the following commands to build the project
+
 mvn clean
+
 mvn package -DskipTests
+
 . Now push the service on the pcf dev using cf push it will read the configuration from manifest.yml file of the project
 
 
