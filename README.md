@@ -46,14 +46,30 @@ cf create-service-broker hashmap-service-broker username password http://hashmap
 
 .Next, we need to make the service plan public, as all plans start private by default.
 
-cf enable-service-access <service-name>(hashmap-service-broker)
+cf enable-service-access service-name(hashmap-service-broker)
 
 .You should now be able to see your service in the marketplace:
 cf marketplace
 
 .Next, create an instance of your service:
 
-cf create-service <service-name> basic custom-hash
+cf create-service service-name basic custom-hash
+
+Now it’s time to push and bind to the client app.
+
+.We’ll use a CF application manifest to take care of our metadata, including binding to the HashBroker service.
+
+Now push the client app using : cf push
+
+.Once the application is running, you can test it:
+http://route-of-your-client-application/HashBroker/{key-name}
+This is PUT operation
+Now put some value in this key for ex {"value":"bar"}
+Now perform the GET call on the key to fetch the value 
+http://route-of-your-client-application/HashBroker/{key-name} it will return value.
+
+
+
 
 
 
