@@ -52,7 +52,8 @@ cf enable-service-access <service-name>(hashmap-service-broker)
 cf marketplace
 
 .Next, create an instance of your service:
-cf create-service <service-name>(in this case it is HashBroker) basic custom-hash
+
+cf create-service <service-name> basic custom-hash
 
 
 
