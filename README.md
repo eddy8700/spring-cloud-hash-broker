@@ -30,5 +30,7 @@ cf dev start
 cf login -a https://api.local.pcfdev.io --skip-ssl-validation
 Enter your username and password
 
+.Clone the repository 
+
 
 
