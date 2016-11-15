@@ -23,13 +23,9 @@ This lab will guide you through:
 . First install the pcf dev for your operating system as per the instructions provided in the url 
 https://pivotal.io/academy/course/introduction-to-pivotal-cloud-foundry
 . After installing the pcf dev.Start the pcf dev using the command
-----
 cf dev start
-----
 . Once pcf is started login to cf using your credentials
-----
 cf login -a https://api.local.pcfdev.io --skip-ssl-validation
-----
 Enter your username and password
 
 
