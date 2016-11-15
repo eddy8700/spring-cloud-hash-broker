@@ -55,7 +55,7 @@ cf marketplace
 
 cf create-service service-name basic custom-hash
 
-Now it’s time to push and bind to the client app.Go to broker-client and run 
+Now it’s time to push and bind to the client app.Go to hashmap-broker-client and run 
 
 
 mvn clean
