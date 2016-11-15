@@ -30,7 +30,9 @@ cf dev start
 cf login -a https://api.local.pcfdev.io --skip-ssl-validation
 Enter your username and password
 
-.Clone the repository 
+. Clone the repository git clone https://github.com/eddy8700/spring-cloud-hash-broker.git
+
+
 
 
 
