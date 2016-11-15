@@ -38,7 +38,8 @@ mvn clean
 
 mvn package -DskipTests
 
-. Now push the service on the pcf dev using cf push it will read the configuration from manifest.yml file of the project
+. Now push the service on the pcf dev using #cf push
+it will read the configuration from manifest.yml file of the project
 
 
 
