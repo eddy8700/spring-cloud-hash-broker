@@ -1,0 +1,7 @@
+applications:
+- name: hashmap-broker-client
+  memory: 512M
+  buildpack: java_buildpack
+  path: ./target/hashmap-broker-client-0.0.1-SNAPSHOT.jar
+  services:
+  - custom-hash

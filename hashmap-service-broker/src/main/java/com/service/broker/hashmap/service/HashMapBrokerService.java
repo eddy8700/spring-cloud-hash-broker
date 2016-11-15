@@ -1,0 +1,39 @@
+package com.service.broker.hashmap.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.service.broker.hashmap.util.CustomHashMap;
+import com.service.broker.hashmap.util.CustomHashMapApi;
+
+@Component
+public class HashMapBrokerService {
+	
+	@Autowired
+	CustomHashMapApi<String, CustomHashMapApi<Object, Object>> customHashMapApi;
+	
+
+    public void create(String id) {
+    	customHashMapApi.put(id, new CustomHashMap<Object, Object>());
+    }
+
+    public void delete(String id) {
+    	customHashMapApi.remove(id);
+    }
+
+    public void put(String id, Object key, Object value) {
+        CustomHashMapApi<Object, Object> mapInstance = customHashMapApi.get(id);
+        mapInstance.put(key, value);
+    }
+
+    public Object get(String id, Object key) {
+        CustomHashMapApi<Object, Object> mapInstance = customHashMapApi.get(id);
+        return mapInstance.get(key);
+    }
+
+    public void delete(String id, Object key) {
+        CustomHashMapApi<Object, Object> mapInstance = customHashMapApi.get(id);
+        mapInstance.remove(key);
+    }
+
+}
