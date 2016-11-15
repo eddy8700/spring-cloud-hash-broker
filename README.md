@@ -79,6 +79,17 @@ Now perform the GET call on the key to fetch the value
 http://route-of-your-client-application/HashBroker/{key-name} it will return value.
 
 
+Routes
+======
+|Routes|Method|Description|
+|------|------|-----------|
+|/v2/catalog|GET|Service and its plan details by this broker|
+|/v2/service_instances/:id|PUT|create a dedicated database for this service|
+|/v2/service_instances/:id|DELETE|delete previously created database for this service|
+|/v2/service_instances/:id/service_bindings/:id|PUT|create user and grant privilege for the database associated with service.|
+|/v2/service_instances/:id/service_bindings/:id|DELETE|delete the user created previously for this binding.|
+
+
 
 
 
